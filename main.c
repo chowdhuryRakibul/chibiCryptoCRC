@@ -19,7 +19,21 @@
 #include "chprintf.h"
 #include "crc.h"
 #include <string.h>
+#include "ff.h"
 
+
+#define FILE_NAME "aXXXXXX.BIN"
+
+char readBuff[1024];
+
+FIL currentFile;
+
+FATFS SDC_FS;
+
+//SDIO configuration
+static const SDCConfig sdccfg = {
+  SDC_MODE_4BIT
+};
 
 void initUART(void)
 {
@@ -39,6 +53,25 @@ int myPrintf(const char *fmt, ...) {
 
   return formatted_bytes;
 }
+
+
+void initSdCard(const SDCConfig *config, FATFS *SDC_FS)
+{
+  sdcInit();
+  sdcStart(&SDCD1, config);
+
+  sdcConnect(&SDCD1);
+
+  myPrintf("OK\r\n\r\nCard Info\r\n");
+  myPrintf("CSD      : %08X %8X %08X %08X \r\n",
+           SDCD1.csd[3], SDCD1.csd[2], SDCD1.csd[1], SDCD1.csd[0]);
+  myPrintf("CID      : %08X %8X %08X %08X \r\n",
+           SDCD1.cid[3], SDCD1.cid[2], SDCD1.cid[1], SDCD1.cid[0]);
+  myPrintf("Capacity : %DMB\r\n", SDCD1.capacity / 2048);
+
+  f_mount(SDC_FS, "/", 1);
+}
+
 /*
  * Application entry point.
  */
@@ -57,12 +90,30 @@ int main(void) {
   initUART();
   myPrintf("Bismillah\r\n");
 
-  const unsigned char  test[] = "123456789";
-  const unsigned char newTest[] = "abcdefghi";
+  uint16_t buffSize = 1024;
+  uint16_t bytesRead;
 
-  myPrintf("0x%X\r\n",uzlib_crc32(test,strlen(test),-1));
+  initSdCard(&sdccfg, &SDC_FS);
 
+  f_open(&currentFile,FILE_NAME,FA_READ);
 
+  uint32_t crc = -1;
+
+  while(1)
+  {
+    f_read(&currentFile, readBuff, buffSize, &bytesRead);
+    if(!f_eof(&currentFile))
+    {
+      crc = crc32_update(readBuff,bytesRead,crc);
+    }
+    else
+    {
+      crc = crc32_final(readBuff,bytesRead,crc);
+      break;
+    }
+  }
+
+  myPrintf("0x%X\r\n",crc);
 
   /*
    * Normal main() thread activity, in this demo it does nothing except

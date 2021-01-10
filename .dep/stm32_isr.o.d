@@ -101,6 +101,7 @@ build/obj/stm32_isr.o: \
  ../../chibios203/os/hal/include/hal_serial.h \
  ../../chibios203/os/hal/ports/STM32/LLD/USARTv1/hal_serial_lld.h \
  ../../chibios203/os/hal/include/hal_sdc.h \
+ ../../chibios203/os/hal/ports/STM32/LLD/SDIOv1/hal_sdc_lld.h \
  ../../chibios203/os/hal/include/hal_sio.h \
  ../../chibios203/os/hal/include/hal_spi.h \
  ../../chibios203/os/hal/include/hal_trng.h \
@@ -320,6 +321,8 @@ cfg/mcuconf.h:
 ../../chibios203/os/hal/ports/STM32/LLD/USARTv1/hal_serial_lld.h:
 
 ../../chibios203/os/hal/include/hal_sdc.h:
+
+../../chibios203/os/hal/ports/STM32/LLD/SDIOv1/hal_sdc_lld.h:
 
 ../../chibios203/os/hal/include/hal_sio.h:
 

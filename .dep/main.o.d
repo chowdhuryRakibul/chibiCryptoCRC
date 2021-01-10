@@ -99,6 +99,7 @@ build/obj/main.o: main.c ../../chibios203/os/rt/include/ch.h cfg/chconf.h \
  ../../chibios203/os/hal/include/hal_serial.h \
  ../../chibios203/os/hal/ports/STM32/LLD/USARTv1/hal_serial_lld.h \
  ../../chibios203/os/hal/include/hal_sdc.h \
+ ../../chibios203/os/hal/ports/STM32/LLD/SDIOv1/hal_sdc_lld.h \
  ../../chibios203/os/hal/include/hal_sio.h \
  ../../chibios203/os/hal/include/hal_spi.h \
  ../../chibios203/os/hal/include/hal_trng.h \
@@ -124,7 +125,9 @@ build/obj/main.o: main.c ../../chibios203/os/rt/include/ch.h cfg/chconf.h \
  c:\chibistudio\tools\gnu\ tools\ arm\ embedded\7.0\ 2017q4\arm-none-eabi\include\sys\cdefs.h \
  c:\chibistudio\tools\gnu\ tools\ arm\ embedded\7.0\ 2017q4\arm-none-eabi\include\xlocale.h \
  c:\chibistudio\tools\gnu\ tools\ arm\ embedded\7.0\ 2017q4\arm-none-eabi\include\strings.h \
- c:\chibistudio\tools\gnu\ tools\ arm\ embedded\7.0\ 2017q4\arm-none-eabi\include\sys\string.h
+ c:\chibistudio\tools\gnu\ tools\ arm\ embedded\7.0\ 2017q4\arm-none-eabi\include\sys\string.h \
+ ../../chibios203/ext/fatfs/src/ff.h \
+ ../../chibios203/ext/fatfs/src/ffconf.h
 
 ../../chibios203/os/rt/include/ch.h:
 
@@ -334,6 +337,8 @@ cfg/mcuconf.h:
 
 ../../chibios203/os/hal/include/hal_sdc.h:
 
+../../chibios203/os/hal/ports/STM32/LLD/SDIOv1/hal_sdc_lld.h:
+
 ../../chibios203/os/hal/include/hal_sio.h:
 
 ../../chibios203/os/hal/include/hal_spi.h:
@@ -387,3 +392,7 @@ c:\chibistudio\tools\gnu\ tools\ arm\ embedded\7.0\ 2017q4\arm-none-eabi\include
 c:\chibistudio\tools\gnu\ tools\ arm\ embedded\7.0\ 2017q4\arm-none-eabi\include\strings.h:
 
 c:\chibistudio\tools\gnu\ tools\ arm\ embedded\7.0\ 2017q4\arm-none-eabi\include\sys\string.h:
+
+../../chibios203/ext/fatfs/src/ff.h:
+
+../../chibios203/ext/fatfs/src/ffconf.h:

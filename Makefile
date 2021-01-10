@@ -110,6 +110,7 @@ include $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC/mk/port_v7m.mk
 include $(CHIBIOS)/tools/mk/autobuild.mk
 # Other files (optional).
 include $(CHIBIOS)/os/hal/lib/streams/streams.mk
+include $(CHIBIOS)/os/various/fatfs_bindings/fatfs.mk
 include ./user.mk
 # Define linker script file here
 LDSCRIPT= $(STARTUPLD)/STM32F407xG.ld

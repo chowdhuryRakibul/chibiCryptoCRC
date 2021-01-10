@@ -58,23 +58,11 @@ int main(void) {
   myPrintf("Bismillah\r\n");
 
   const unsigned char  test[] = "123456789";
+  const unsigned char newTest[] = "abcdefghi";
+
+  myPrintf("0x%X\r\n",uzlib_crc32(test,strlen(test),-1));
 
 
-  /*
-   * Print the check value for the selected CRC algorithm.
-   */
-  myPrintf("The check value for the %s standard is 0x%X\n", CRC_NAME, CHECK_VALUE);
-
-  /*
-   * Compute the CRC of the test message, slowly.
-   */
-  myPrintf("The crcSlow() of \"123456789\" is 0x%X\n", crcSlow(test, strlen(test)));
-
-  /*
-   * Compute the CRC of the test message, more efficiently.
-   */
-  crcInit();
-  myPrintf("The crcFast() of \"123456789\" is 0x%X\n", crcFast(test, strlen(test)));
 
   /*
    * Normal main() thread activity, in this demo it does nothing except

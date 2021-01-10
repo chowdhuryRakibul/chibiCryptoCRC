@@ -7,9 +7,9 @@ start address 0x080002b9
 
 Program Header:
     LOAD off    0x00010000 vaddr 0x08000000 paddr 0x08000000 align 2**16
-         filesz 0x00001cd4 memsz 0x00001cd4 flags r-x
-    LOAD off    0x00020800 vaddr 0x20000800 paddr 0x08001cd4 align 2**16
-         filesz 0x00000000 memsz 0x0000063c flags rw-
+         filesz 0x00001ba4 memsz 0x00001ba4 flags r-x
+    LOAD off    0x00020800 vaddr 0x20000800 paddr 0x08001ba4 align 2**16
+         filesz 0x00000000 memsz 0x0000023c flags rw-
     LOAD off    0x00020000 vaddr 0x20000000 paddr 0x20000000 align 2**16
          filesz 0x00000000 memsz 0x00020000 flags rw-
 private flags = 5000200: [Version5 EABI] [soft-float ABI]
@@ -22,78 +22,78 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
   2 .vectors      000001e0  08000000  08000000  00010000  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  3 .text         00001984  080001e0  080001e0  000101e0  2**4
+  3 .text         00001894  080001e0  080001e0  000101e0  2**4
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  4 .rodata       00000170  08001b64  08001b64  00011b64  2**2
+  4 .rodata       00000130  08001a74  08001a74  00011a74  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .data         00000000  20000800  20000800  00011cd4  2**2
+  5 .data         00000000  20000800  20000800  00011ba4  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  6 .bss          0000063c  20000800  08001cd4  00020800  2**3
+  6 .bss          0000023c  20000800  08001ba4  00020800  2**3
                   ALLOC
-  7 .ram0_init    00000000  20000e3c  20000e3c  00011cd4  2**2
+  7 .ram0_init    00000000  20000a3c  20000a3c  00011ba4  2**2
                   CONTENTS
-  8 .ram0         00000000  20000e3c  20000e3c  00011cd4  2**2
+  8 .ram0         00000000  20000a3c  20000a3c  00011ba4  2**2
                   CONTENTS
-  9 .ram1_init    00000000  20000000  20000000  00011cd4  2**2
+  9 .ram1_init    00000000  20000000  20000000  00011ba4  2**2
                   CONTENTS
- 10 .ram1         00000000  20000000  20000000  00011cd4  2**2
+ 10 .ram1         00000000  20000000  20000000  00011ba4  2**2
                   CONTENTS
- 11 .ram2_init    00000000  2001c000  2001c000  00011cd4  2**2
+ 11 .ram2_init    00000000  2001c000  2001c000  00011ba4  2**2
                   CONTENTS
- 12 .ram2         00000000  2001c000  2001c000  00011cd4  2**2
+ 12 .ram2         00000000  2001c000  2001c000  00011ba4  2**2
                   CONTENTS
- 13 .ram3_init    00000000  00000000  00000000  00011cd4  2**2
+ 13 .ram3_init    00000000  00000000  00000000  00011ba4  2**2
                   CONTENTS
- 14 .ram3         00000000  00000000  00000000  00011cd4  2**2
+ 14 .ram3         00000000  00000000  00000000  00011ba4  2**2
                   CONTENTS
- 15 .ram4_init    00000000  10000000  10000000  00011cd4  2**2
+ 15 .ram4_init    00000000  10000000  10000000  00011ba4  2**2
                   CONTENTS
- 16 .ram4         00000000  10000000  10000000  00011cd4  2**2
+ 16 .ram4         00000000  10000000  10000000  00011ba4  2**2
                   CONTENTS
- 17 .ram5_init    00000000  40024000  40024000  00011cd4  2**2
+ 17 .ram5_init    00000000  40024000  40024000  00011ba4  2**2
                   CONTENTS
- 18 .ram5         00000000  40024000  40024000  00011cd4  2**2
+ 18 .ram5         00000000  40024000  40024000  00011ba4  2**2
                   CONTENTS
- 19 .ram6_init    00000000  00000000  00000000  00011cd4  2**2
+ 19 .ram6_init    00000000  00000000  00000000  00011ba4  2**2
                   CONTENTS
- 20 .ram6         00000000  00000000  00000000  00011cd4  2**2
+ 20 .ram6         00000000  00000000  00000000  00011ba4  2**2
                   CONTENTS
- 21 .ram7_init    00000000  00000000  00000000  00011cd4  2**2
+ 21 .ram7_init    00000000  00000000  00000000  00011ba4  2**2
                   CONTENTS
- 22 .ram7         00000000  00000000  00000000  00011cd4  2**2
+ 22 .ram7         00000000  00000000  00000000  00011ba4  2**2
                   CONTENTS
- 23 .heap         0001f1c4  20000e3c  20000e3c  00020000  2**0
+ 23 .heap         0001f5c4  20000a3c  20000a3c  00020000  2**0
                   ALLOC
- 24 .ARM.attributes 0000002d  00000000  00000000  00011cd4  2**0
+ 24 .ARM.attributes 0000002d  00000000  00000000  00011ba4  2**0
                   CONTENTS, READONLY
- 25 .comment      0000007e  00000000  00000000  00011d01  2**0
+ 25 .comment      0000007e  00000000  00000000  00011bd1  2**0
                   CONTENTS, READONLY
- 26 .debug_line   00001959  00000000  00000000  00011d7f  2**0
+ 26 .debug_line   000018b4  00000000  00000000  00011c4f  2**0
                   CONTENTS, READONLY, DEBUGGING
- 27 .debug_info   000064b8  00000000  00000000  000136d8  2**0
+ 27 .debug_info   000062d8  00000000  00000000  00013503  2**0
                   CONTENTS, READONLY, DEBUGGING
- 28 .debug_abbrev 0000074d  00000000  00000000  00019b90  2**0
+ 28 .debug_abbrev 00000745  00000000  00000000  000197db  2**0
                   CONTENTS, READONLY, DEBUGGING
- 29 .debug_aranges 000001a8  00000000  00000000  0001a2e0  2**3
+ 29 .debug_aranges 000001a8  00000000  00000000  00019f20  2**3
                   CONTENTS, READONLY, DEBUGGING
- 30 .debug_str    00001d35  00000000  00000000  0001a488  2**0
+ 30 .debug_str    00001d3b  00000000  00000000  0001a0c8  2**0
                   CONTENTS, READONLY, DEBUGGING
- 31 .debug_loc    000034c8  00000000  00000000  0001c1bd  2**0
+ 31 .debug_loc    000031f7  00000000  00000000  0001be03  2**0
                   CONTENTS, READONLY, DEBUGGING
- 32 .debug_ranges 000011e8  00000000  00000000  0001f685  2**0
+ 32 .debug_ranges 00001170  00000000  00000000  0001effa  2**0
                   CONTENTS, READONLY, DEBUGGING
- 33 .debug_frame  00000464  00000000  00000000  00020870  2**2
+ 33 .debug_frame  00000464  00000000  00000000  0002016c  2**2
                   CONTENTS, READONLY, DEBUGGING
 SYMBOL TABLE:
 20000000 l    d  .mstack	00000000 .mstack
 20000400 l    d  .pstack	00000000 .pstack
 08000000 l    d  .vectors	00000000 .vectors
 080001e0 l    d  .text	00000000 .text
-08001b64 l    d  .rodata	00000000 .rodata
+08001a74 l    d  .rodata	00000000 .rodata
 20000800 l    d  .data	00000000 .data
 20000800 l    d  .bss	00000000 .bss
-20000e3c l    d  .ram0_init	00000000 .ram0_init
-20000e3c l    d  .ram0	00000000 .ram0
+20000a3c l    d  .ram0_init	00000000 .ram0_init
+20000a3c l    d  .ram0	00000000 .ram0
 20000000 l    d  .ram1_init	00000000 .ram1_init
 20000000 l    d  .ram1	00000000 .ram1
 2001c000 l    d  .ram2_init	00000000 .ram2_init
@@ -108,7 +108,7 @@ SYMBOL TABLE:
 00000000 l    d  .ram6	00000000 .ram6
 00000000 l    d  .ram7_init	00000000 .ram7_init
 00000000 l    d  .ram7	00000000 .ram7
-20000e3c l    d  .heap	00000000 .heap
+20000a3c l    d  .heap	00000000 .heap
 00000000 l    d  .ARM.attributes	00000000 .ARM.attributes
 00000000 l    d  .comment	00000000 .comment
 00000000 l    d  .debug_line	00000000 .debug_line
@@ -134,7 +134,7 @@ SYMBOL TABLE:
 080002e0 l       .text	00000000 _zombies
 00000000 l    df *ABS*	00000000 lib_a-memcpy.o
 00000000 l    df *ABS*	00000000 
-08000420 l     F .text	00000090 _pal_lld_setgroupmode.constprop.10
+08000420 l     F .text	00000090 _pal_lld_setgroupmode.constprop.11
 080004b0 l     F .text	0000003c chCoreAllocFromTop
 080004f0 l     F .text	00000010 notify6
 08000500 l     F .text	0000004c _port_irq_epilogue
@@ -143,7 +143,7 @@ SYMBOL TABLE:
 080005d0 l     F .text	0000000c chTMStartMeasurementX
 080005e0 l     F .text	00000070 wakeup
 08000650 l     F .text	00000028 chSchReadyI
-08000680 l     F .text	00000060 chEvtBroadcastFlagsI.constprop.12
+08000680 l     F .text	00000060 chEvtBroadcastFlagsI.constprop.13
 080006e0 l     F .text	00000002 _idle_thread
 080006f0 l     F .text	00000004 _ctl
 08000700 l     F .text	00000028 chSchGoSleepS
@@ -167,18 +167,18 @@ SYMBOL TABLE:
 200008f4 l     O .bss	00000048 ch_factory
 20000940 l     O .bss	000000d8 ch_idle_thread_wa
 20000a18 l     O .bss	00000008 ch_memcore
-20000a20 l     O .bss	00000400 crcTable
-20000e20 l     O .bss	0000001c default_heap
-08001b64 l     O .rodata	00000016 ch_debug
-08001c2c l     O .rodata	00000080 ram_areas
-08001cac l     O .rodata	00000028 vmt
+20000a20 l     O .bss	0000001c default_heap
+08001a74 l     O .rodata	00000016 ch_debug
+08001abc l     O .rodata	00000080 ram_areas
+08001b3c l     O .rodata	00000040 tinf_crc32tab
+08001b7c l     O .rodata	00000028 vmt
 080002ba  w    F .text	00000000 Vector58
 080002ba  w    F .text	00000000 VectorE8
 080002ba  w    F .text	00000000 Vector9C
 00000000 g       .bss	00000000 __flash3_base__
 00000000 g       *ABS*	00000000 __flash1_end__
 080002ba  w    F .text	00000000 VectorAC
-08001560 g     F .text	00000050 chThdExit
+08001470 g     F .text	00000050 chThdExit
 00000000 g       .ram7	00000000 __flash6_free__
 00000000 g       .bss	00000000 __flash7_base__
 080002ba  w    F .text	00000000 DebugMon_Handler
@@ -192,7 +192,7 @@ SYMBOL TABLE:
 080002ba  w    F .text	00000000 HardFault_Handler
 080002ba  w    F .text	00000000 Vector1B8
 080002ba  w    F .text	00000000 Vector19C
-20000e3c g       .ram0_init	00000000 __ram0_init__
+20000a3c g       .ram0_init	00000000 __ram0_init__
 080002ba  w    F .text	00000000 Vector8C
 080002ba  w    F .text	00000000 SysTick_Handler
 080001e0 g       .text	00000000 __init_array_base__
@@ -203,15 +203,15 @@ SYMBOL TABLE:
 080002ba  w    F .text	00000000 Vector168
 080002ba  w    F .text	00000000 NMI_Handler
 08000000 g       .vectors	00000000 _vectors
-08001cd4 g       .rodata	00000000 __exidx_end
+08001ba4 g       .rodata	00000000 __exidx_end
 080002ba  w    F .text	00000000 Vector110
-08001b64 g       .text	00000000 __text_end__
-20000e3c g       .ram0	00000000 __ram0_free__
-20000e40 g       .heap	00000000 __heap_base__
+08001a74 g       .text	00000000 __text_end__
+20000a3c g       .ram0	00000000 __ram0_free__
+20000a40 g       .heap	00000000 __heap_base__
 080002ba  w    F .text	00000000 Vector120
 080002ba  w    F .text	00000000 Vector1D8
 080002ba  w    F .text	00000000 VectorC8
-08001cd4 g       *ABS*	00000000 __ram3_init_text__
+08001ba4 g       *ABS*	00000000 __ram3_init_text__
 080002ba  w    F .text	00000000 Vector94
 40025000 g       *ABS*	00000000 __ram5_end__
 40024000 g       .ram5	00000000 __ram5_noinit__
@@ -223,7 +223,7 @@ SYMBOL TABLE:
 00000000 g       *ABS*	00000000 __flash7_size__
 00000000 g       .bss	00000000 __ram6_base__
 20000800 g       .pstack	00000000 __main_thread_stack_end__
-08001cd4 g       .rodata	00000000 __rodata_end__
+08001ba4 g       .rodata	00000000 __rodata_end__
 080001e0 g     F .text	00000000 _crt0_entry
 080002ba  w    F .text	00000000 Vector74
 080002ba  w    F .text	00000000 Vector160
@@ -249,17 +249,17 @@ SYMBOL TABLE:
 080002ba  w    F .text	00000000 Vector1CC
 2001c000 g       *ABS*	00000000 __ram1_end__
 10010000 g       *ABS*	00000000 __ram4_end__
-08001cd4 g       .rodata	00000000 __exidx_start
-08001cd4 g       *ABS*	00000000 __textdata_base__
-08001cd4 g       *ABS*	00000000 __ram0_init_text__
-08001cd4 g       *ABS*	00000000 __ram1_init_text__
+08001ba4 g       .rodata	00000000 __exidx_start
+08001ba4 g       *ABS*	00000000 __textdata_base__
+08001ba4 g       *ABS*	00000000 __ram0_init_text__
+08001ba4 g       *ABS*	00000000 __ram1_init_text__
 00000000 g       *ABS*	00000000 __flash5_end__
 00000000 g       .ram7	00000000 __flash2_free__
 080002ba  w    F .text	00000000 Vector148
 080002ba  w    F .text	00000000 Vector188
 00020000 g       *ABS*	00000000 __ram0_size__
 00000000 g       *ABS*	00000000 __flash2_end__
-08001cd4 g       *ABS*	00000000 __ram5_init_text__
+08001ba4 g       *ABS*	00000000 __ram5_init_text__
 00000000 g       *ABS*	00000000 __flash4_size__
 080002ba  w    F .text	00000000 Vector198
 080002ba  w    F .text	00000000 Vector118
@@ -274,16 +274,16 @@ SYMBOL TABLE:
 40024000 g       .ram5	00000000 __ram5_free__
 080002ba  w    F .text	00000000 VectorD8
 00000000 g       *ABS*	00000000 __flash6_end__
-08001cd4 g       *ABS*	00000000 __ram6_init_text__
+08001ba4 g       *ABS*	00000000 __ram6_init_text__
 080002ba  w    F .text	00000000 Vector138
 080002ba  w    F .text	00000000 Vector24
 00000000 g       .ram3	00000000 __ram3_clear__
-08001b40 g     F .text	00000002 __default_exit
+08001a50 g     F .text	00000002 __default_exit
 00000000 g       *ABS*	00000000 __ram6_end__
 00000000 g       .bss	00000000 __flash5_base__
 00000000 g       .ram6_init	00000000 __ram6_init__
 080002ba  w    F .text	00000000 Vector1AC
-080015b0 g     F .text	00000040 chSchDoReschedule
+080014c0 g     F .text	00000040 chSchDoReschedule
 00000000 g       .ram7_init	00000000 __ram7_init__
 080002ba  w    F .text	00000000 Vector178
 00000000 g       .ram6	00000000 __ram6_free__
@@ -295,9 +295,9 @@ SYMBOL TABLE:
 10000000 g       .ram4_init	00000000 __ram4_init__
 20000800 g       .bss	00000000 __bss_base__
 080002ba  w    F .text	00000000 Vector1A4
-20000e3c g       .bss	00000000 __bss_end__
+20000a3c g       .bss	00000000 __bss_end__
 00000000 g       .ram7	00000000 __ram7_clear__
-08001cd4 g       .ram7	00000000 __flash0_init__
+08001ba4 g       .ram7	00000000 __flash0_init__
 080002ba  w    F .text	00000000 VectorD0
 00000000 g       *ABS*	00000000 __ram7_size__
 080002ba  w    F .text	00000000 Vector1B4
@@ -305,15 +305,15 @@ SYMBOL TABLE:
 080002ba  w    F .text	00000000 VectorE4
 080002ba  w    F .text	00000000 VectorC0
 080002ba  w    F .text	00000000 Vector158
-08001cd4 g       .ram7	00000000 __flash0_free__
+08001ba4 g       .ram7	00000000 __flash0_free__
 080002ba  w    F .text	00000000 Vector130
 080002c0 g     F .text	00000000 _port_switch
 00000000 g       .bss	00000000 __flash6_base__
-08001b60 g     F .text	00000002 __core_init
+08001a70 g     F .text	00000002 __core_init
 10000000 g       .ram4	00000000 __ram4_noinit__
 080002ba  w    F .text	00000000 Vector1C0
 080001e0 g       .text	00000000 __fini_array_end__
-08001b50 g     F .text	00000002 __late_init
+08001a60 g     F .text	00000002 __late_init
 080002ba  w    F .text	00000000 Vector134
 00000000 g       .ram6	00000000 __ram6_clear__
 080002ba  w    F .text	00000000 Vector1D0
@@ -329,29 +329,29 @@ SYMBOL TABLE:
 2001c000 g       .ram2	00000000 __ram2_clear__
 00000000 g       *ABS*	00000000 __ram3_end__
 00004000 g       *ABS*	00000000 __ram2_size__
-08001b64 g       .rodata	00000000 __rodata_base__
+08001a74 g       .rodata	00000000 __rodata_base__
 00000000 g       *ABS*	00000000 __flash3_size__
 20000000 g       .bss	00000000 __ram1_base__
 080002ba  w    F .text	00000000 MemManage_Handler
-08000f60 g     F .text	000005d8 main
+08000f60 g     F .text	000004f0 main
 080002ba  w    F .text	00000000 Vector6C
 00000000 g       *ABS*	00000000 __ram6_size__
 080001e0 g       .text	00000000 __fini_array_base__
 080002ba  w    F .text	00000000 VectorA0
-08001cd4 g       *ABS*	00000000 __ram2_init_text__
+08001ba4 g       *ABS*	00000000 __ram2_init_text__
 00000000 g       *ABS*	00000000 __flash5_size__
-08001540 g     F .text	00000012 SVC_Handler
+08001450 g     F .text	00000012 SVC_Handler
 00000000 g       .ram3	00000000 __ram3_free__
 00000000 g       .ram7	00000000 __flash3_init__
 080002ba  w    F .text	00000000 VectorC4
 080002ba  w    F .text	00000000 Vector7C
 00000000 g       .ram7	00000000 __flash6_init__
-08001cd4 g       *ABS*	00000000 __ram4_init_text__
+08001ba4 g       *ABS*	00000000 __ram4_init_text__
 080002ba  w    F .text	00000000 Vector180
 20000000 g       .ram1	00000000 __ram1_noinit__
-08001a20 g     F .text	000000a4 VectorB0
+08001930 g     F .text	000000a4 VectorB0
 080002ba  w    F .text	00000000 Vector90
-08001cd4 g       .rodata	00000000 __exidx_end__
+08001ba4 g       .rodata	00000000 __exidx_end__
 080002ba  w    F .text	00000000 Vector114
 080002d0 g     F .text	00000000 _port_thread_start
 080002ba  w    F .text	00000000 Vector164
@@ -368,17 +368,17 @@ SYMBOL TABLE:
 20000400 g       .pstack	00000000 __process_stack_base__
 080002ba  w    F .text	00000000 Vector1A8
 080002ba  w    F .text	00000000 Vector16C
-20000e3c g       .ram0	00000000 __ram0_clear__
+20000a3c g       .ram0	00000000 __ram0_clear__
 080002ba  w    F .text	00000000 Vector70
 080002ba  w    F .text	00000000 VectorD4
 00000000 g       .ram3	00000000 __ram3_noinit__
-20000e3c g       .ram0	00000000 __ram0_noinit__
-08001ad0 g     F .text	00000068 __init_ram_areas
+20000a3c g       .ram0	00000000 __ram0_noinit__
+080019e0 g     F .text	00000068 __init_ram_areas
 080002ba  w    F .text	00000000 Vector4C
 080002ba  w    F .text	00000000 Vector144
 080002ba  w    F .text	00000000 Vector80
 080002e2 g     F .text	00000000 _port_switch_from_isr
-08001860 g     F .text	000001b4 Vector15C
+08001770 g     F .text	000001b4 Vector15C
 00000000 g       .bss	00000000 __flash1_base__
 00000000 g       *ABS*	00000000 __ram7_end__
 080002ba  w    F .text	00000000 Vector68
@@ -393,11 +393,11 @@ SYMBOL TABLE:
 080002be  w    F .text	00000000 _unhandled_exception
 080002ba  w    F .text	00000000 Vector170
 080002ba  w    F .text	00000000 Vector88
-08001cd4 g       .rodata	00000000 __exidx_base__
+08001ba4 g       .rodata	00000000 __exidx_base__
 00100000 g       *ABS*	00000000 __flash0_size__
 20000400 g       .pstack	00000000 __main_thread_stack_base__
 2001c000 g       .bss	00000000 __ram2_base__
-08001cd4 g       *ABS*	00000000 __ram7_init_text__
+08001ba4 g       *ABS*	00000000 __ram7_init_text__
 00000000 g       .ram3_init	00000000 __ram3_init__
 080002ba  w    F .text	00000000 Vector104
 20000000 g       .bss	00000000 __ram0_base__
@@ -428,7 +428,7 @@ SYMBOL TABLE:
 20000800 g       .pstack	00000000 __process_stack_end__
 080002ba  w    F .text	00000000 Vector34
 00000000 g       .ram7	00000000 __flash2_init__
-080015f0 g     F .text	00000268 __early_init
+08001500 g     F .text	00000268 __early_init
 00000000 g       .ram7	00000000 __flash4_init__
 080002ba  w    F .text	00000000 Vector128
 080002ba  w    F .text	00000000 VectorA4
